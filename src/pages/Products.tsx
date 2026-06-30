@@ -6,7 +6,7 @@ import { useSearchParams } from 'react-router-dom';
 import { Filter, Grid, List as ListIcon, ChevronDown } from 'lucide-react';
 
 function ProductsContent() {
-  const searchParams = useSearchParams();
+  const [searchParams] = useSearchParams();
   const categoryQuery = searchParams.get('category');
   
   const [activeCategory, setActiveCategory] = useState(categoryQuery || "All");
