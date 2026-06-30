@@ -54,13 +54,9 @@ function ProductsContent() {
       </div>
 
       {/* Ultra-Premium Toolbar Wrapper */}
-      <div style={{ 
-        display: 'flex', 
-        justifyContent: 'space-between', 
-        alignItems: 'center', 
+      <div className="products-toolbar" style={{ 
         marginTop: '-2rem',
         marginBottom: '3rem',
-        flexWrap: 'nowrap',
         gap: '1rem',
         position: 'relative',
         zIndex: 10,
@@ -109,11 +105,10 @@ function ProductsContent() {
         </div>
 
         {/* Right Actions Glass Dock */}
-        <div style={{ 
+        <div className="products-actions" style={{ 
           display: 'flex', 
           gap: '1rem', 
           alignItems: 'center',
-          flexShrink: 0,
           background: 'rgba(10, 10, 10, 0.8)', 
           backdropFilter: 'blur(20px)',
           border: '1px solid var(--border)',

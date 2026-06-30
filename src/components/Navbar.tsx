@@ -12,6 +12,7 @@ export default function Navbar() {
   const { cart, setIsCartOpen, setIsLoginOpen, notifications, clearNotifications, theme, toggleTheme, isLoggedIn, user, logout } = useApp();
   const [showNotif, setShowNotif] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,7 +61,15 @@ export default function Navbar() {
         <li><Link to="/admin" className="nav-link" style={{ color: 'var(--primary)', fontWeight: 700 }}>Admin</Link></li>
       </ul>
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+      <button 
+        className="mobile-menu-btn"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        style={{ background: 'none', border: 'none', color: 'var(--text-main)', cursor: 'pointer' }}
+      >
+        <Menu size={24} />
+      </button>
+
+      <div className="nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
         
         {/* Theme Toggle Button */}
         <button 
@@ -172,6 +181,28 @@ export default function Navbar() {
           </AnimatePresence>
         </div>
       </div>
+
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            style={{
+              position: 'absolute', top: '90px', left: 0, right: 0,
+              background: 'var(--glass-bg)', backdropFilter: 'blur(16px)',
+              borderBottom: '1px solid var(--border)', padding: '1rem 5%',
+              display: 'flex', flexDirection: 'column', gap: '1.5rem', overflow: 'hidden'
+            }}
+          >
+            <Link to="/" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+            <Link to="/products" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Products</Link>
+            <Link to="/ingredients" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Ingredients</Link>
+            <Link to="/about" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
+            <Link to="/admin" className="nav-link" style={{ color: 'var(--primary)', fontWeight: 700 }} onClick={() => setIsMobileMenuOpen(false)}>Admin</Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
