@@ -69,7 +69,7 @@ function ProductsContent() {
           display: 'flex', 
           gap: '0.25rem', 
           overflowX: 'auto', 
-          padding: '0.5rem', 
+          padding: '0.5rem 1.5rem', 
           scrollbarWidth: 'none', 
           alignItems: 'center', 
           background: 'rgba(10, 10, 10, 0.8)', 
@@ -92,6 +92,7 @@ function ProductsContent() {
                 fontWeight: 600,
                 cursor: 'pointer',
                 whiteSpace: 'nowrap',
+                flexShrink: 0,
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                 boxShadow: activeCategory === cat ? '0 4px 15px var(--primary-glow)' : 'none',
                 textTransform: 'capitalize'
