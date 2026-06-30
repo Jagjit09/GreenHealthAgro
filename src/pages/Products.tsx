@@ -103,6 +103,8 @@ function ProductsContent() {
               {cat === 'instanttea' ? 'Instant Tea' : cat === 'instantcoffe' ? 'Instant Coffee' : cat === 'mushroomsoup' ? 'Mushroom Soup' : cat}
             </button>
           ))}
+          {/* Spacer to enforce right padding in scrollable flex container */}
+          <div style={{ paddingRight: '1rem', flexShrink: 0 }} />
         </div>
 
         {/* Right Actions Glass Dock */}
