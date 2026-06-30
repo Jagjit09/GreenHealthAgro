@@ -43,7 +43,7 @@ export default function Navbar() {
       }}
     >
       <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-        <Link href="/" style={{ textDecoration: 'none' }}>
+        <Link to="/" style={{ textDecoration: 'none' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <span style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-main)', letterSpacing: '-0.5px' }}>
               GreenHealth
@@ -53,11 +53,11 @@ export default function Navbar() {
       </div>
 
       <ul className="nav-links">
-        <li><Link href="/" className="nav-link">Home</Link></li>
-        <li><Link href="/products" className="nav-link">Products</Link></li>
-        <li><Link href="/ingredients" className="nav-link">Ingredients</Link></li>
-        <li><Link href="/about" className="nav-link">About Us</Link></li>
-        <li><Link href="/admin" className="nav-link" style={{ color: 'var(--primary)', fontWeight: 700 }}>Admin</Link></li>
+        <li><Link to="/" className="nav-link">Home</Link></li>
+        <li><Link to="/products" className="nav-link">Products</Link></li>
+        <li><Link to="/ingredients" className="nav-link">Ingredients</Link></li>
+        <li><Link to="/about" className="nav-link">About Us</Link></li>
+        <li><Link to="/admin" className="nav-link" style={{ color: 'var(--primary)', fontWeight: 700 }}>Admin</Link></li>
       </ul>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
@@ -151,7 +151,7 @@ export default function Navbar() {
                   <p style={{ margin: 0, fontSize: '0.8rem', color: 'var(--text-muted)' }}>{user?.email}</p>
                 </div>
                 <Link 
-                  href="/orders"
+                  to="/orders"
                   onClick={() => setShowUserMenu(false)}
                   style={{ display: 'block', width: '100%', textAlign: 'left', padding: '0.5rem 1rem', background: 'none', border: 'none', color: 'var(--text-main)', fontWeight: 600, cursor: 'pointer', borderRadius: '8px', transition: 'background 0.2s', textDecoration: 'none', marginBottom: '4px' }}
                   onMouseEnter={(e) => e.currentTarget.style.background = 'var(--surface-hover)'}

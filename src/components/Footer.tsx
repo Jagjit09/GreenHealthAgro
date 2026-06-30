@@ -43,10 +43,10 @@ const Footer = () => {
       <div className="footer-col" style={{ marginBottom: '1.5rem', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
         <h3 style={{ margin: 0, whiteSpace: 'nowrap' }}>Quick Links</h3>
         <ul className="footer-links" style={{ flexDirection: 'row', gap: '2rem', margin: 0, flexWrap: 'wrap', alignItems: 'center' }}>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/products">Shop Products</Link></li>
-          <li><Link href="/about">About Us</Link></li>
-          <li><Link href="/ingredients">Our Ingredients</Link></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/products">Shop Products</Link></li>
+          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/ingredients">Our Ingredients</Link></li>
         </ul>
       </div>
 
@@ -54,10 +54,10 @@ const Footer = () => {
       <div className="footer-col" style={{ marginBottom: '4rem', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
         <h3 style={{ margin: 0, whiteSpace: 'nowrap' }}>Categories</h3>
         <ul className="footer-links" style={{ flexDirection: 'row', gap: '2rem', margin: 0, flexWrap: 'wrap', alignItems: 'center' }}>
-          <li><Link href="/products">Instant Tea</Link></li>
-          <li><Link href="/products">Instant Coffee</Link></li>
-          <li><Link href="/products">Mushroom Soup</Link></li>
-          <li><Link href="/products">Supplementary</Link></li>
+          <li><Link to="/products">Instant Tea</Link></li>
+          <li><Link to="/products">Instant Coffee</Link></li>
+          <li><Link to="/products">Mushroom Soup</Link></li>
+          <li><Link to="/products">Supplementary</Link></li>
         </ul>
       </div>
 

@@ -126,7 +126,7 @@ export default function Home() {
       <section className="products-container" style={{ paddingBottom: '2rem' }}>
         <div className="section-header">
           <h2 className="section-title">Select Categories</h2>
-          <Link href="/products" className="show-all">Show All</Link>
+          <Link to="/products" className="show-all">Show All</Link>
         </div>
         
         <div style={{ display: 'flex', gap: '1.5rem', overflowX: 'auto', paddingBottom: '1rem', scrollbarWidth: 'none' }}>
@@ -198,7 +198,7 @@ export default function Home() {
       <section className="products-container" style={{ paddingTop: '2rem' }}>
         <div className="section-header">
           <h2 className="section-title">Most Popular</h2>
-          <Link href="/products" className="show-all">Show All</Link>
+          <Link to="/products" className="show-all">Show All</Link>
         </div>
         
         <div className="grid">
