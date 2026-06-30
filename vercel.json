@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/wp-content/(.*)",
+      "destination": "https://greenhealthagrofoods.in/wp-content/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
