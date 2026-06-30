@@ -143,9 +143,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .products-toolbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .nav-link {
